@@ -1,5 +1,11 @@
 # Finance Api Project
 
+## Get Started with Flask App
+You have to be at the `finance-api/` repository level
+```bash
+python3 -m flask --app finance run --port 8000 --debug
+```
+
 ## Stage 1: Expense API
 - Add New Expense
 - Read Expense

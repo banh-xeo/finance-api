@@ -42,7 +42,7 @@ class DBApi:
         finally:
             self.db_conn.close()
 
-    def excute_all(self, query: str, params: tuple = None) -> list:
+    def execute_all(self, query: str, params: tuple = None) -> list:
         """Executes a SELECT query and returns all results.
 
         :param query: The SQL query to execute
