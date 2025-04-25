@@ -42,7 +42,7 @@ class DBApi:
         finally:
             self.db_conn.close()
 
-    def execute_all(self, query: str, params: tuple = None) -> list:
+    def execute_all(self, query: str, params: tuple = None) -> list[tuple]:
         """Executes a SELECT query and returns all results.
 
         :param query: The SQL query to execute
@@ -52,14 +52,16 @@ class DBApi:
         try:
             cursor: sqlite3.Cursor = self.db_conn.cursor()
             cursor.execute(query, params or ())
-            return cursor.fetchall()
+            result =  cursor.fetchall()
+            print(f"execute_all result: {result}")
+            return result
         except sqlite3.Error as e:
             print(f"An error occurred: {e}")
             return None
         finally:
             self.db_conn.close()
 
-    def execute_one(self, query: str, params: tuple = None):
+    def execute_one(self, query: str, params: tuple = None) -> tuple:
         """Executes a SELECT query and returns one result.
 
         :param query: The SQL query to execute
@@ -78,5 +80,4 @@ class DBApi:
 
     def _get_db_connection(self, db_name: str) -> sqlite3.Connection:
         conn = sqlite3.connect(db_name)
-        # conn.row_factory = sqlite3.Row  # Makes rows dict-like
         return conn
