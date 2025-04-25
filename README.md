@@ -7,10 +7,10 @@ python3 run.py
 ```
 
 ## Stage 1: Expense API
-- Add New Expense
-- Read Expense
-- Update Expense
-- Delete Expense
+[] Add New Expense
+[] Read Expense
+[] Update Expense
+[] Delete Expense
 
 
 # 📘 SQLite CLI Cheat Sheet
