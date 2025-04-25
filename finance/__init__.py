@@ -1,5 +1,5 @@
 from flask import Flask
-from finance import expense
+from finance.routes import expense
 
 def create_app():
     app = Flask(__name__)

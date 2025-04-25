@@ -3,7 +3,7 @@
 ## Get Started with Flask App
 You have to be at the `finance-api/` repository level
 ```bash
-python3 -m flask --app finance run --port 8000 --debug
+python3 run.py
 ```
 
 ## Stage 1: Expense API
