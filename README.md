@@ -9,7 +9,7 @@
 
 # 📘 SQLite CLI Cheat Sheet
 
-Use the `sqlite3` command-line interface to explore and interact with your SQLite database.
+Use the `sqlite3` command-line interface to explore and interact with SQLite database.
 
 ## 🏁 Starting the CLI
 ```bash
