@@ -6,11 +6,9 @@ You have to be at the `finance-api/` repository level
 python3 run.py
 ```
 
-## Stage 1: Expense API
-[] Add New Expense
-[] Read Expense
-[] Update Expense
-[] Delete Expense
+### Stage 1: Expense Endpoints, Tests, and Refinement (In Progress)
+### Stage 2: Income Endpoints, Tests, and Refinement (Funnel)
+### Stage 3: Architecture Improvements (Move to frontend works)
 
 
 # 📘 SQLite CLI Cheat Sheet
