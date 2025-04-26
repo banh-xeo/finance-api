@@ -52,12 +52,10 @@ class DBApi:
         try:
             cursor: sqlite3.Cursor = self.db_conn.cursor()
             cursor.execute(query, params or ())
-            result =  cursor.fetchall()
-            print(f"execute_all result: {result}")
-            return result
+            return cursor.fetchall()
         except sqlite3.Error as e:
-            print(f"An error occurred: {e}")
-            return None
+            print(f"An error occurred in execute_all. {e}")
+            raise e
         finally:
             self.db_conn.close()
 
