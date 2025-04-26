@@ -1,0 +1,20 @@
+2025-04-26 at 13:58:10 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 20
+2025-04-26 at 13:58:10 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-04-26 at 13:58:10 | ERROR | finance.services.expense_service:delete_expense_by_id:62 | Expense with ID=20 not found!
+2025-04-26 at 13:58:19 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 10
+2025-04-26 at 13:58:19 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-04-26 at 13:58:19 | ERROR | finance.services.expense_service:delete_expense_by_id:62 | Expense with ID=10 not found!
+2025-04-26 at 13:58:22 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 15
+2025-04-26 at 13:58:22 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (15, 69.69, 'Entertainment', 'Go Skating with Friends', '2025-12-30')
+2025-04-26 at 13:58:24 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 15
+2025-04-26 at 13:58:24 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-04-26 at 13:58:24 | ERROR | finance.services.expense_service:delete_expense_by_id:62 | Expense with ID=15 not found!
+2025-04-26 at 13:58:29 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 2200.1, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31'), (2, 45.5, 'Groceries', "Weekly grocery run at Trader Joe's", '2025-10-21'), (3, 120.0, 'Utilities', 'Electricity bill for October', '2025-10-15'), (4, 18.75, 'Transport', 'Uber ride to work', '2025-10-22'), (5, 65.99, 'Shopping', 'Bought new running shoes from Nike', '2025-10-17'), (6, 12.99, 'Entertainment', 'Monthly Netflix subscription', '2025-10-01'), (7, 250.0, 'Rent', 'Partial rent payment for November', '2025-10-25'), (8, 30.0, 'Health', 'Pharmacy - prescription refill', '2025-10-18'), (9, 55.0, 'Dining Out', 'Dinner with friends at Thai Palace', '2025-10-19'), (11, 150.1, 'Car', 'Oil Changes and Tire Rotations for Mazda', '2026-11-29'), (14, 20.5, 'Shopping', 'Ulta', '2024-12-31')]
+2025-04-26 at 13:58:37 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 14
+2025-04-26 at 13:58:37 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (14, 20.5, 'Shopping', 'Ulta', '2024-12-31')
+2025-04-26 at 13:58:39 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 11
+2025-04-26 at 13:58:39 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (11, 150.1, 'Car', 'Oil Changes and Tire Rotations for Mazda', '2026-11-29')
+2025-04-26 at 13:58:42 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 11
+2025-04-26 at 13:58:42 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-04-26 at 13:58:42 | ERROR | finance.services.expense_service:delete_expense_by_id:62 | Expense with ID=11 not found!
+2025-04-26 at 13:58:44 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 2200.1, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31'), (2, 45.5, 'Groceries', "Weekly grocery run at Trader Joe's", '2025-10-21'), (3, 120.0, 'Utilities', 'Electricity bill for October', '2025-10-15'), (4, 18.75, 'Transport', 'Uber ride to work', '2025-10-22'), (5, 65.99, 'Shopping', 'Bought new running shoes from Nike', '2025-10-17'), (6, 12.99, 'Entertainment', 'Monthly Netflix subscription', '2025-10-01'), (7, 250.0, 'Rent', 'Partial rent payment for November', '2025-10-25'), (8, 30.0, 'Health', 'Pharmacy - prescription refill', '2025-10-18'), (9, 55.0, 'Dining Out', 'Dinner with friends at Thai Palace', '2025-10-19')]

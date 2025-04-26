@@ -1,7 +1,18 @@
+from enum import Enum
 from loguru import logger
 
 
 class Expense:
+
+    class Query(Enum):
+        """Enum for SQL queries related to the Expense model."""
+        SELECT_ALL = "SELECT * FROM expense"
+        SELECT_BY_ID = "SELECT * FROM expense WHERE id = ?"
+        INSERT = "INSERT INTO expense (amount, category, description, date) VALUES (?, ?, ?, ?)"
+        UPDATE = "UPDATE expense SET amount = ?, category = ?, description = ?, date = ? WHERE id = ?"
+        DELETE = "DELETE FROM expense WHERE id = ?"
+
+
     def __init__(self, amount: float, category: str, description: str, date: str):
         self.amount = amount
         self.category = category
@@ -18,7 +29,7 @@ class Expense:
             "date": self.date,
         }
 
-    def param(self):
+    def params(self) -> tuple[str]:
         return (self.amount, self.category, self.description, self.date)
 
     @classmethod
@@ -29,7 +40,7 @@ class Expense:
             obj.id = data[0]
             return obj
         except IndexError as e:
-            logger.error(f"IndexError: {e}")
+            logger.error(f"IndexError: {e}. data_tuple: {data}")
             raise e
 
     @classmethod
@@ -42,5 +53,5 @@ class Expense:
                 date=data["date"],
             )
         except KeyError as e:
-            logger.error(f"KeyError: {e}")
+            logger.error(f"KeyError: {e}, data_dict: {data}")
             raise e

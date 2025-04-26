@@ -1,4 +1,5 @@
 import sqlite3
+from loguru import logger
 
 
 class DBApi:
@@ -18,8 +19,9 @@ class DBApi:
             cursor.execute(query, params or ())
             self.db_conn.commit()
         except sqlite3.Error as e:
-            print(f"An error occurred: {e}")
+            logger.error(f"An error occurred: {e}")
             self.db_conn.rollback()
+            raise e
         finally:
             self.db_conn.close()
 
@@ -36,9 +38,9 @@ class DBApi:
             self.db_conn.commit()
             return cursor.lastrowid
         except sqlite3.Error as e:
-            print(f"An error occurred: {e}")
+            logger.error(f"An error occurred: {e}")
             self.db_conn.rollback()
-            return None
+            raise e
         finally:
             self.db_conn.close()
 
@@ -54,7 +56,8 @@ class DBApi:
             cursor.execute(query, params or ())
             return cursor.fetchall()
         except sqlite3.Error as e:
-            print(f"An error occurred in execute_all. {e}")
+            logger.error(f"An error occurred: {e}")
+            self.db_conn.rollback()
             raise e
         finally:
             self.db_conn.close()
@@ -71,8 +74,9 @@ class DBApi:
             cursor.execute(query, params or ())
             return cursor.fetchone()
         except sqlite3.Error as e:
-            print(f"An error occurred: {e}")
-            return None
+            logger.error(f"An error occurred: {e}")
+            self.db_conn.rollback()
+            raise e
         finally:
             self.db_conn.close()
 
