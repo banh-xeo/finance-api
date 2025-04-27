@@ -1,8 +1,5 @@
-from finance.db import DBApi
 from finance.services import ExpenseService
 from flask import Blueprint, request
-from finance.models import Expense
-from loguru import logger
 
 
 expense_bp = Blueprint("expense", __name__)
@@ -44,8 +41,11 @@ def update_expense_by_id(expense_id: int):
         return {"status": 200, "message": "Expense updated successfully"}
     return {"status": 400, "message": "Failed to update expense"}
 
+
 @expense_bp.route("/expense/<int:expense_id>", methods=["DELETE"])
 def delete_expense_by_id(expense_id: int):
+    if not ExpenseService.get_expense_by_id(expense_id):
+        return {"status": 404, "message": "Expense not found"}
     if ExpenseService.delete_expense_by_id(expense_id):
         return {"status": 200, "message": "Expense deleted successfully"}
     return {"status": 400, "message": "Failed to delete expense"}
