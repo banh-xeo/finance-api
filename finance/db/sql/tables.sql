@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS expense (
     category TEXT NOT NULL,
     description TEXT,
     date TEXT NOT NULL
-)
+);
 -- Create Income Table (Coming Later)
 -- Create Transfer Table (Coming Later)

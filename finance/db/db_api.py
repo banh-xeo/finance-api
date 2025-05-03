@@ -18,7 +18,6 @@ class DBApi:
         self.db_conn = sqlite3.connect(db_name, check_same_thread=False)
         self.db_name = db_name
 
-
     @classmethod
     def get_instance(cls, db_name: str):
         if not cls._instance:
