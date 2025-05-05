@@ -1,14 +1,20 @@
 import os
 import pytest
 import sqlite3
-from .config import PERSIST_STORAGE, TEST_DB_NAME
+from tests.config import PERSIST_STORAGE, TEST_DB_NAME
 from finance.db import DBApi
 
 
 # TODO: Might move this to test_db_utils.py
 @pytest.fixture(scope="session")
-def setup_db():
-    """Fixture to set up a test database if hasn't been created yet."""
+def setup_db_name():
+    """Fixture to set up a test database if hasn't been created yet.
+
+    The database is created only once per test session, and it is deleted
+    after all tests are done, unless PERSIST_STORAGE is set to True.
+
+    :return: Path to the test database.
+    """
     tests_dir = os.path.dirname(os.path.abspath(__file__))
     tests_storage_dir = os.path.join(tests_dir, "storage")
     test_db_path = os.path.join(tests_storage_dir, TEST_DB_NAME)
@@ -47,12 +53,24 @@ def setup_db():
 
 
 class TestDBApi:
-    # Create a setup test fixtures start create a new test database
-    # Create a tear down test fixtures to remove the test database
+    def test_singleton_behavior(self, setup_db_name):
+        db_api_1 = DBApi.get_instance(setup_db_name)
+        db_api_2 = DBApi.get_instance(setup_db_name)
 
-    # Test scenario 1: Create 2 instances of DBApi and assert they're the same (Singleton test)
-    # Test scenario 2: Testing for __init__ error
-    # Test each of the execution methods (execute_all, execute_one, execute_update, execute_insert_one)
-    # Test each of the execution methods error handling
-    def test_stuff(self, setup_db):
+        assert db_api_1 is db_api_2, "DBApi instances are not the same (Singleton test failed)"
+
+    def test_init_error(self, setup_db_name):
+        with pytest.raises(Exception, match="Singleton Error"):
+            DBApi(setup_db_name)
+
+    def test_one_data_set(self, setup_db_name):
+        db_api = DBApi.get_instance(setup_db_name)
+        pass
+
+    def test_many_data_sets(self, setup_db_name):
+        db_api = DBApi.get_instance(setup_db_name)
+        pass
+
+    def test_none_data_set(self, setup_db_name):
+        db_api = DBApi.get_instance(setup_db_name)
         pass
