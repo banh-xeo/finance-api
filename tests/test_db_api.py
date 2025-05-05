@@ -12,3 +12,4 @@ class TestDBApi:
     # Test scenario 2: Testing for __init__ error
     # Test each of the execution methods (execute_all, execute_one, execute_update, execute_insert_one)
     # Test each of the execution methods error handling
+    

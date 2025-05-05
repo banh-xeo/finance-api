@@ -1,5 +1,6 @@
 import sqlite3
 import threading
+from .db_utils import get_storage_path
 from loguru import logger
 
 
@@ -15,7 +16,8 @@ class DBApi:
             logger.error(err_msg)
             raise Exception(err_msg)
         logger.debug(f"Initializing db_conn and db_name = {db_name}")
-        self.db_conn = sqlite3.connect(db_name, check_same_thread=False)
+
+        self.db_conn = sqlite3.connect(get_storage_path(db_name), check_same_thread=False)
         self.db_name = db_name
 
     @classmethod
