@@ -12,7 +12,7 @@ class DBApi:
 
     def __init__(self, db_name: str):
         if DBApi._instance is not None:
-            err_msg: str = "This class is a singleton! Use get_instance() to get the instance."
+            err_msg: str = "Singleton Error! Use get_instance() to get the instance."
             logger.error(err_msg)
             raise Exception(err_msg)
         logger.debug(f"Initializing db_conn and db_name = {db_name}")
@@ -42,7 +42,7 @@ class DBApi:
                 cursor.execute(query, params or ())
                 return cursor.fetchall()
             except sqlite3.Error as e:
-                logger.error(f"An error occurred: {e}")
+                logger.error(f"execute_all error: {e}")
                 self.db_conn.rollback()
                 raise e
 
@@ -59,7 +59,7 @@ class DBApi:
                 cursor.execute(query, params or ())
                 return cursor.fetchone()
             except sqlite3.Error as e:
-                logger.error(f"An error occurred: {e}")
+                logger.error(f"execute_one error: {e}")
                 self.db_conn.rollback()
                 raise e
 
@@ -75,7 +75,7 @@ class DBApi:
                 cursor.execute(query, params or ())
                 self.db_conn.commit()
             except sqlite3.Error as e:
-                logger.error(f"An error occurred: {e}")
+                logger.error(f"execture_update error: {e}")
                 self.db_conn.rollback()
                 raise e
 
@@ -93,6 +93,6 @@ class DBApi:
                 self.db_conn.commit()
                 return cursor.lastrowid
             except sqlite3.Error as e:
-                logger.error(f"An error occurred: {e}")
+                logger.error(f"execute_insert_one error: {e}")
                 self.db_conn.rollback()
                 raise e
