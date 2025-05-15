@@ -31,5 +31,5 @@ def get_storage_path(file_name: str) -> str:
     DB_DIR = os.path.dirname(__file__)
     STORAGE_DIR = os.path.join(DB_DIR, "storage")
     file_name = os.path.join(STORAGE_DIR, file_name)
-    logger.debug(f"DB_DIR: {DB_DIR}, STORAGE_DIR: {STORAGE_DIR}, file_name: {file_name}")
+    logger.debug(f"\n\tDB_DIR: {DB_DIR}\n\tSTORAGE_DIR: {STORAGE_DIR}\n\tfile_name: {file_name}")
     return file_name

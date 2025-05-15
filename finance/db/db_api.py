@@ -27,6 +27,7 @@ class DBApi:
                 if not cls._instance:
                     cls._instance = cls(db_name)
                     logger.debug(f"New DBApi instance CREATED with db_name: {db_name}")
+        logger.debug(f"An instance of DBApi exists with db_name: {db_name}")
         return cls._instance
 
     def execute_all(self, query: str, params: tuple = None) -> list[tuple]:
