@@ -54,8 +54,8 @@ SELECT sql FROM sqlite_master WHERE type='table' AND name='your_table';
 | `.tables`             | List all tables in the database.            |
 | `.schema`             | Show schema for all tables.                 |
 | `.schema table_name`  | Show schema of a specific table.            |
-| `.databases`          | List attached databases and their file paths. |
+| `.databases`          | List attached DB and their file paths.      |
 | `.headers on`         | Show column headers in query results.       |
 | `.mode column`        | Format query results in aligned columns.    |
 | `.mode markdown`      | Output results in Markdown table format.    |
-| `.nullvalue NULL`     | Show "NULL" for null values instead of blank. |
+| `.nullvalue NULL`     | Show "NULL" values instead of blank.        |
