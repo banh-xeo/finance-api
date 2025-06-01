@@ -1,10 +1,66 @@
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:35 | Getting storage path for file_name: finance.db
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:36 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:40 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:42 | Exist file_path? False
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:initialize_db:16 | Exist db_path? False
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:initialize_db:21 | Creating new database and initializing schema...
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:35 | Getting storage path for file_name: schema.sql
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:36 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:40 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/schema.sql
-2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:42 | Exist file_path? True
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:32 | Getting storage path for file_name: finance.db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:33 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:37 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:initialize_db:18 | Creating new database and initializing schema...
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:32 | Getting storage path for file_name: schema.sql
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:33 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:37 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/schema.sql
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:32 | Getting storage path for file_name: finance.db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:33 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:get_storage_path:37 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
+2025-06-01 at 19:31:27 | DEBUG | finance.db.db_utils:initialize_db:25 | Database already exists at /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db. No action taken.
+2025-06-01 at 19:33:08 | INFO | finance.routes.expense_routes:all_expenses:14 | Fetching all expenses
+2025-06-01 at 19:33:08 | DEBUG | finance.db.db_api:__init__:18 | Initializing db_conn and db_name = finance.db
+2025-06-01 at 19:33:08 | DEBUG | finance.db.db_utils:get_storage_path:32 | Getting storage path for file_name: finance.db
+2025-06-01 at 19:33:08 | DEBUG | finance.db.db_utils:get_storage_path:33 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:33:08 | DEBUG | finance.db.db_utils:get_storage_path:37 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
+2025-06-01 at 19:33:08 | DEBUG | finance.db.db_api:get_instance:29 | New DBApi instance CREATED with db_name: finance.db
+2025-06-01 at 19:33:08 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:33:08 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: []
+2025-06-01 at 19:38:15 | INFO | finance.routes.expense_routes:add_expense:23 | 
+Adding a new expense
+2025-06-01 at 19:38:15 | DEBUG | finance.services.expense_service:add_expense:35 | body: {'amount': 100.0, 'category': 'Shopping', 'description': 'PS5', 'date': '2025-06-01'}
+2025-06-01 at 19:38:15 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:38:48 | DEBUG | finance.db.db_utils:get_storage_path:32 | Getting storage path for file_name: finance.db
+2025-06-01 at 19:38:48 | DEBUG | finance.db.db_utils:get_storage_path:33 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:38:48 | DEBUG | finance.db.db_utils:get_storage_path:37 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
+2025-06-01 at 19:38:48 | DEBUG | finance.db.db_utils:initialize_db:25 | Database already exists at /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db. No action taken.
+2025-06-01 at 19:39:18 | INFO | finance.routes.expense_routes:all_expenses:14 | Fetching all expenses
+2025-06-01 at 19:39:18 | DEBUG | finance.db.db_api:__init__:18 | Initializing db_conn and db_name = finance.db
+2025-06-01 at 19:39:18 | DEBUG | finance.db.db_utils:get_storage_path:32 | Getting storage path for file_name: finance.db
+2025-06-01 at 19:39:18 | DEBUG | finance.db.db_utils:get_storage_path:33 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:39:18 | DEBUG | finance.db.db_utils:get_storage_path:37 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
+2025-06-01 at 19:39:18 | DEBUG | finance.db.db_api:get_instance:29 | New DBApi instance CREATED with db_name: finance.db
+2025-06-01 at 19:39:18 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:39:18 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 100.0, 'Shopping', 'PS5', '2025-06-01')]
+2025-06-01 at 19:39:32 | INFO | finance.routes.expense_routes:get_expense_by_id:32 | Fetching expense with ID: 2
+2025-06-01 at 19:39:32 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:39:32 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-06-01 at 19:40:16 | INFO | finance.routes.expense_routes:get_expense_by_id:32 | Fetching expense with ID: 1
+2025-06-01 at 19:40:16 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:40:16 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (1, 100.0, 'Shopping', 'PS5', '2025-06-01')
+2025-06-01 at 19:41:17 | INFO | finance.routes.expense_routes:update_expense_by_id:41 | Updating expense with ID: 2
+2025-06-01 at 19:41:17 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:41:17 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-06-01 at 19:42:11 | INFO | finance.routes.expense_routes:update_expense_by_id:41 | Updating expense with ID: 1
+2025-06-01 at 19:42:11 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:42:11 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (1, 100.0, 'Shopping', 'PS5', '2025-06-01')
+2025-06-01 at 19:42:11 | DEBUG | finance.services.expense_service:update_expense_by_id:47 | expense_id: 1, body: {'amount': 100.0, 'category': 'Shopping', 'date': '2025-06-01', 'description': 'PS5 Slim disc edition'}
+2025-06-01 at 19:42:11 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:42:51 | INFO | finance.routes.expense_routes:get_expense_by_id:32 | Fetching expense with ID: 1
+2025-06-01 at 19:42:51 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:42:51 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (1, 100.0, 'Shopping', 'PS5 Slim disc edition', '2025-06-01')
+2025-06-01 at 19:42:56 | INFO | finance.routes.expense_routes:all_expenses:14 | Fetching all expenses
+2025-06-01 at 19:42:56 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:42:56 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 100.0, 'Shopping', 'PS5 Slim disc edition', '2025-06-01')]
+2025-06-01 at 19:43:03 | INFO | finance.routes.expense_routes:delete_expense_by_id:51 | Deleting expense with ID: 2
+2025-06-01 at 19:43:03 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:43:03 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
+2025-06-01 at 19:43:06 | INFO | finance.routes.expense_routes:delete_expense_by_id:51 | Deleting expense with ID: 1
+2025-06-01 at 19:43:06 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:43:06 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (1, 100.0, 'Shopping', 'PS5 Slim disc edition', '2025-06-01')
+2025-06-01 at 19:43:06 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 1
+2025-06-01 at 19:43:06 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:43:09 | INFO | finance.routes.expense_routes:delete_expense_by_id:51 | Deleting expense with ID: 1
+2025-06-01 at 19:43:09 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
+2025-06-01 at 19:43:09 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None

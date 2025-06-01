@@ -20,7 +20,7 @@ def all_expenses():
 
 @expense_bp.route("/expense", methods=["POST"])
 def add_expense():
-    logger.info("\nAdding a new expense")
+    logger.info("Adding a new expense")
     expense_id: int = ExpenseService.add_expense(request.get_json())
     if expense_id:
         return {"status": 201, "expense_id": expense_id}
