@@ -1,49 +1,10 @@
-2025-06-01 at 13:25:46 | DEBUG | finance.db.db_utils:get_storage_path:34 | 
-	DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
-	STORAGE_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db/storage
-	file_name: /Users/vnguye12/Code/projects/finance-api/finance/db/storage/finance.db
-2025-06-01 at 13:25:46 | DEBUG | finance.db.db_utils:initialize_db:24 | Database already exists at /Users/vnguye12/Code/projects/finance-api/finance/db/storage/finance.db. No action taken.
-2025-06-01 at 13:25:52 | INFO | finance.routes.expense_routes:all_expenses:17 | Fetching all expenses
-2025-06-01 at 13:25:52 | DEBUG | finance.db.db_api:__init__:18 | Initializing db_conn and db_name = finance.db
-2025-06-01 at 13:25:52 | DEBUG | finance.db.db_utils:get_storage_path:34 | 
-	DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
-	STORAGE_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db/storage
-	file_name: /Users/vnguye12/Code/projects/finance-api/finance/db/storage/finance.db
-2025-06-01 at 13:25:52 | DEBUG | finance.db.db_api:get_instance:29 | New DBApi instance CREATED with db_name: finance.db
-2025-06-01 at 13:25:52 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:25:52 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 220.0, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31'), (2, 45.5, 'Groceries', "Weekly grocery run at Trader Joe's", '2025-10-21'), (3, 120.0, 'Utilities', 'Electricity bill for October', '2025-10-15'), (4, 18.75, 'Transport', 'Uber ride to work', '2025-10-22'), (5, 65.99, 'Shopping', 'Bought new running shoes from Nike', '2025-10-17'), (6, 12.99, 'Entertainment', 'Monthly Netflix subscription', '2025-10-01'), (7, 250.0, 'Rent', 'Partial rent payment for November', '2025-10-25'), (8, 30.0, 'Health', 'Pharmacy - prescription refill', '2025-10-18'), (9, 55.0, 'Dining Out', 'Dinner with friends at Thai Palace', '2025-10-19'), (17, 1220.0, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31')]
-2025-06-01 at 13:25:57 | INFO | finance.routes.expense_routes:get_expense_by_id:35 | Fetching expense with ID: 16
-2025-06-01 at 13:25:57 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:25:57 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
-2025-06-01 at 13:26:02 | INFO | finance.routes.expense_routes:get_expense_by_id:35 | Fetching expense with ID: 17
-2025-06-01 at 13:26:02 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:26:02 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (17, 1220.0, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31')
-2025-06-01 at 13:26:13 | INFO | finance.routes.expense_routes:update_expense_by_id:44 | Updating expense with ID: 16
-2025-06-01 at 13:26:13 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:26:13 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
-2025-06-01 at 13:26:42 | INFO | finance.routes.expense_routes:update_expense_by_id:44 | Updating expense with ID: 17
-2025-06-01 at 13:26:42 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:26:42 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (17, 1220.0, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31')
-2025-06-01 at 13:26:42 | DEBUG | finance.services.expense_service:update_expense_by_id:47 | expense_id: 17, body: {'amount': 1220.0, 'category': 'Restaurant', 'date': '2025-06-01', 'description': 'Went to Red Robin for Graduation celebration'}
-2025-06-01 at 13:26:42 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:27:41 | INFO | finance.routes.expense_routes:add_expense:26 | 
-Adding a new expense
-2025-06-01 at 13:27:41 | DEBUG | finance.services.expense_service:add_expense:35 | body: {'amount': 450.0, 'category': 'Shopping', 'description': 'PS5', 'date': '2025-06-01'}
-2025-06-01 at 13:27:41 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:27:49 | INFO | finance.routes.expense_routes:all_expenses:17 | Fetching all expenses
-2025-06-01 at 13:27:49 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:27:49 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 220.0, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31'), (2, 45.5, 'Groceries', "Weekly grocery run at Trader Joe's", '2025-10-21'), (3, 120.0, 'Utilities', 'Electricity bill for October', '2025-10-15'), (4, 18.75, 'Transport', 'Uber ride to work', '2025-10-22'), (5, 65.99, 'Shopping', 'Bought new running shoes from Nike', '2025-10-17'), (6, 12.99, 'Entertainment', 'Monthly Netflix subscription', '2025-10-01'), (7, 250.0, 'Rent', 'Partial rent payment for November', '2025-10-25'), (8, 30.0, 'Health', 'Pharmacy - prescription refill', '2025-10-18'), (9, 55.0, 'Dining Out', 'Dinner with friends at Thai Palace', '2025-10-19'), (17, 1220.0, 'Restaurant', 'Went to Red Robin for Graduation celebration', '2025-06-01'), (18, 450.0, 'Shopping', 'PS5', '2025-06-01')]
-2025-06-01 at 13:28:09 | INFO | finance.routes.expense_routes:delete_expense_by_id:54 | Deleting expense with ID: 16
-2025-06-01 at 13:28:09 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:28:09 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
-2025-06-01 at 13:28:14 | INFO | finance.routes.expense_routes:delete_expense_by_id:54 | Deleting expense with ID: 17
-2025-06-01 at 13:28:14 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:28:14 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: (17, 1220.0, 'Restaurant', 'Went to Red Robin for Graduation celebration', '2025-06-01')
-2025-06-01 at 13:28:14 | DEBUG | finance.services.expense_service:delete_expense_by_id:59 | expense_id: 17
-2025-06-01 at 13:28:14 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:28:16 | INFO | finance.routes.expense_routes:delete_expense_by_id:54 | Deleting expense with ID: 17
-2025-06-01 at 13:28:16 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:28:16 | DEBUG | finance.services.expense_service:get_expense_by_id:26 | expense: None
-2025-06-01 at 13:28:20 | INFO | finance.routes.expense_routes:all_expenses:17 | Fetching all expenses
-2025-06-01 at 13:28:20 | DEBUG | finance.db.db_api:get_instance:30 | An instance of DBApi exists with db_name: finance.db
-2025-06-01 at 13:28:20 | DEBUG | finance.services.expense_service:get_all_expenses:14 | expenses: [(1, 220.0, 'Restaurant', 'Went to Cheesecake factory for Graduation celebration', '2025-12-31'), (2, 45.5, 'Groceries', "Weekly grocery run at Trader Joe's", '2025-10-21'), (3, 120.0, 'Utilities', 'Electricity bill for October', '2025-10-15'), (4, 18.75, 'Transport', 'Uber ride to work', '2025-10-22'), (5, 65.99, 'Shopping', 'Bought new running shoes from Nike', '2025-10-17'), (6, 12.99, 'Entertainment', 'Monthly Netflix subscription', '2025-10-01'), (7, 250.0, 'Rent', 'Partial rent payment for November', '2025-10-25'), (8, 30.0, 'Health', 'Pharmacy - prescription refill', '2025-10-18'), (9, 55.0, 'Dining Out', 'Dinner with friends at Thai Palace', '2025-10-19'), (18, 450.0, 'Shopping', 'PS5', '2025-06-01')]
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:35 | Getting storage path for file_name: finance.db
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:36 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:40 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/finance.db
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:42 | Exist file_path? False
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:initialize_db:16 | Exist db_path? False
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:initialize_db:21 | Creating new database and initializing schema...
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:35 | Getting storage path for file_name: schema.sql
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:36 | DB_DIR: /Users/vnguye12/Code/projects/finance-api/finance/db
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:40 | File path: /Users/vnguye12/Code/projects/finance-api/finance/db/data/schema.sql
+2025-06-01 at 19:24:58 | DEBUG | finance.db.db_utils:get_storage_path:42 | Exist file_path? True

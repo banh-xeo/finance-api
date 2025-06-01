@@ -2,10 +2,7 @@ from finance.services import ExpenseService
 from flask import Blueprint, request
 from loguru import logger
 
-
 expense_bp = Blueprint("expense", __name__)
-DB_NAME: str = "finance.db"
-
 
 @expense_bp.route("/", methods=["GET"])
 def index():
