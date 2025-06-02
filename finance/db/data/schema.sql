@@ -2,6 +2,7 @@
 CREATE TABLE IF NOT EXISTS expense (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     amount REAL NOT NULL,
+    vendor TEXT NOT NULL,
     category TEXT NOT NULL,
     description TEXT,
     date TEXT NOT NULL
