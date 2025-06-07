@@ -8,4 +8,3 @@ Blueprint is a Flask feature that helps organize groups of related routes and lo
 __name__ tells Flask where to find resources for this blueprint (like templates or static files).
 """
 income_bp = Blueprint("income", __name__)
-DB_NAME: str = "finance.db"
