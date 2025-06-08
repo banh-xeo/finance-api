@@ -6,6 +6,9 @@ DB_NAME: str = "finance.db"
 
 
 class ExpenseService:
+    """
+    Service class for managing expenses in the finance application.
+    """
     @staticmethod
     def get_all_expenses() -> list[dict]:
         try:

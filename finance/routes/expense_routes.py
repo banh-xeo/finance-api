@@ -2,11 +2,12 @@ from finance.services import ExpenseService
 from flask import Blueprint, request
 from loguru import logger
 
+"""
+Blueprint is a Flask feature that helps organize groups of related routes and logic into reusable components.
+"expense" is the name of this blueprint. It will be used to register the blueprint with the main Flask app.
+__name__ tells Flask where to find resources for this blueprint (like templates or static files).
+"""
 expense_bp = Blueprint("expense", __name__)
-
-@expense_bp.route("/", methods=["GET"])
-def index():
-    return {"message": "Welcome to the Finance API"}, 200
 
 
 @expense_bp.route("/api/expenses", methods=["GET"])
@@ -18,15 +19,6 @@ def all_expenses():
     return {"message": "No expenses found"}, 404
 
 
-@expense_bp.route("/api/expense", methods=["POST"])
-def add_expense():
-    logger.info("Adding a new expense")
-    expense_id: int = ExpenseService.add_expense(request.get_json())
-    if expense_id:
-        return {"expense_id": expense_id}, 201
-    return {"message": "Failed to add expense"}, 400
-
-
 @expense_bp.route("/api/expense/<int:expense_id>", methods=["GET"])
 def get_expense_by_id(expense_id: int):
     logger.info(f"Fetching expense with ID: {expense_id}")
@@ -34,6 +26,15 @@ def get_expense_by_id(expense_id: int):
     if expense:
         return {"expense": expense}, 200
     return {"message": "Expense not found"}, 404
+
+
+@expense_bp.route("/api/expense", methods=["POST"])
+def add_expense():
+    logger.info("Adding a new expense")
+    expense_id: int = ExpenseService.add_expense(request.get_json())
+    if expense_id:
+        return {"expense_id": expense_id}, 201
+    return {"message": "Failed to add expense"}, 400
 
 
 @expense_bp.route("/api/expense/<int:expense_id>", methods=["PUT"])

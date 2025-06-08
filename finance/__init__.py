@@ -1,7 +1,7 @@
 # File: finance/__init__.py
 from flask import Flask
 from finance.db import initialize_db
-from finance.routes import expense_routes
+from finance.routes import expense_routes, income_routes
 
 
 def create_app() -> Flask:
@@ -13,4 +13,5 @@ def create_app() -> Flask:
 
     app = Flask(__name__)
     app.register_blueprint(expense_routes.expense_bp)
+    app.register_blueprint(income_routes.income_bp)
     return app
